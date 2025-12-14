@@ -27,12 +27,11 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto space-y-12">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white">
             Artist Development <br />
-            <span className="italic text-white/70">for emerging artists</span> <br />
-            &amp; families.
+            <span className="italic text-white/70">for Emerging Artists.</span>
           </h1>
 
           <p className="text-lg md:text-xl font-sans text-muted-foreground max-w-2xl mx-auto tracking-wide">
-            Premium, real-world guidance to help your artist build an industry-ready foundation.
+            Bespoke, real-world guidance to help emerging artists build an industry-ready foundation.
           </p>
 
           <div className="pt-12">
@@ -56,10 +55,10 @@ export default function Home() {
         <div className="container max-w-3xl mx-auto space-y-16">
           <div className="space-y-10">
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
-              Designed for families taking a long-term view — building the right foundation before the stakes get expensive.
+              Designed for those taking a long-term view — building a solid, sustainable foundation.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/70">
-              Guidance is tailored to your artist’s lane, goals, and current level — with clarity on what matters next.
+              Decisions are tuned to the artist's lane, goals, and current level — with clarity on what matters next.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/50">
               Availability is limited. The first step is a strategy call to confirm alignment.
@@ -78,9 +77,9 @@ export default function Home() {
                 alt="Artist Development Company Logo"
                 className="w-24 h-24 mb-8 opacity-80 invert"
               />
-              <div className="text-6xl font-serif text-white mb-2">20+</div>
+              <div className="text-5xl md:text-6xl font-serif text-white/90 mb-2 tracking-tight">20+</div>
               <div className="text-sm font-sans uppercase tracking-widest text-muted-foreground">
-                Years Duration
+                Years in the Industry
               </div>
             </div>
 
@@ -209,7 +208,7 @@ export default function Home() {
                   Add-On Support
                 </h3>
                 <p className="text-sm text-white/50 font-sans mb-6">
-                  Available as an add-on for families and existing teams.
+                  Available as an add-on for established teams or independent artists.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -360,7 +359,7 @@ function ApplicationForm() {
           access_key:
             import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
           ...formData,
-          subject: `New Artist Application: ${formData.artistName}`,
+          subject: `New Strategy Call Request: ${formData.artistName}`,
           from_name: "Artist Development Site",
         }),
       });
@@ -389,8 +388,7 @@ function ApplicationForm() {
         </div>
         <h3 className="text-3xl font-serif">Submission Received</h3>
         <p className="text-muted-foreground font-sans max-w-md mx-auto">
-          Information has been recorded. A representative will contact you if
-          the profile matches current requirements.
+          Information has been recorded. We'll follow up if its a fit.
         </p>
       </div>
     );
@@ -416,11 +414,11 @@ function ApplicationForm() {
                 htmlFor="parentName"
                 className="font-sans text-xs uppercase tracking-wider text-gray-500"
               >
-                Parent / Guardian Name
+                Primary Contact Name
               </Label>
               <Input
                 id="parentName"
-                placeholder="Full Name"
+                placeholder="Name"
                 className="rounded-none border-0 border-b border-black/20 focus:border-black px-0 h-12 font-serif text-xl placeholder:text-gray-300 focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent"
                 value={formData.parentName}
                 onChange={(e) =>
