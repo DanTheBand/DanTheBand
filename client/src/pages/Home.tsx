@@ -27,12 +27,12 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto space-y-12">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white">
             Artist Development <br />
-            <span className="italic text-white/70">and Management</span> <br />
-            Services.
+            <span className="italic text-white/70">for emerging artists</span> <br />
+            &amp; families.
           </h1>
 
           <p className="text-lg md:text-xl font-sans text-muted-foreground max-w-2xl mx-auto tracking-wide">
-            Professional guidance for early-stage career establishment.
+            Premium, real-world guidance to help your artist build an industry-ready foundation.
           </p>
 
           <div className="pt-12">
@@ -45,7 +45,7 @@ export default function Home() {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Consultation Request
+              Request Strategy Call
             </Button>
           </div>
         </div>
@@ -56,16 +56,13 @@ export default function Home() {
         <div className="container max-w-3xl mx-auto space-y-16">
           <div className="space-y-10">
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
-              Services are designed for long-term career planning and
-              infrastructure.
+              Designed for families taking a long-term view — building the right foundation before the stakes get expensive.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/70">
-              Consultation is available for specific industry sectors and
-              territories.
+              Guidance is tailored to your artist’s lane, goals, and current level — with clarity on what matters next.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/50">
-              Client intake is limited to qualified applicants meeting specific
-              criteria.
+              Availability is limited. The first step is a strategy call to confirm alignment.
             </p>
           </div>
         </div>
@@ -104,9 +101,9 @@ export default function Home() {
 
           <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              "Strategic Planning",
-              "Tour Logistics",
-              "Contract Negotiation",
+              "Strategic Direction",
+              "Industry Guidance",
+              "Creative Production",
             ].map((milestone, i) => (
               <div key={i} className="border-t border-white/20 pt-6">
                 <h3 className="text-xl font-serif text-white/90">
@@ -140,19 +137,19 @@ export default function Home() {
             {[
               {
                 title: "Creative Direction",
-                desc: "Focus on artistic output and brand consistency.",
+                desc: "Shape the sound, image, and choices so everything points to one clear identity.",
               },
               {
-                title: "Market Analysis",
-                desc: "Utilization of current industry data points.",
+                title: "Industry Clarity",
+                desc: "Cut through noise and focus on the moves that actually change outcomes.",
               },
               {
-                title: "Industry Network",
-                desc: "Access to relevant professional contacts.",
+                title: "Networked Perspective",
+                desc: "Guidance informed by real relationships and how decisions work in practice.",
               },
               {
-                title: "Personal Development",
-                desc: "Support for non-musical career aspects.",
+                title: "Performance & Presentation",
+                desc: "Prepare your artist to show up confidently — on stage, in sessions, and in rooms that matter.",
               },
             ].map((principle, i) => (
               <div key={i} className="group">
@@ -181,19 +178,18 @@ export default function Home() {
                 Primary Service
               </div>
               <h2 className="text-5xl md:text-6xl font-serif leading-tight">
-                Management <br /> Overview
+                Production <br /> &amp; Artist Development
               </h2>
               <p className="text-xl text-white/60 font-sans max-w-xl leading-relaxed">
-                Comprehensive oversight of all career verticals including
-                administration, creative, and logistics.
+                High-caliber, strategic work to develop the artist — the music, the direction, and the plan — with taste and professional standards.
               </p>
 
               <ul className="space-y-6 mt-8">
                 {[
-                  "Brand Identity",
-                  "Repertoire Selection",
-                  "Digital Assets",
-                  "Team Structure",
+                  "Songwriting & Production",
+                  "Repertoire & Direction",
+                  "Brand & Positioning",
+                  "Team & Infrastructure",
                 ].map((item) => (
                   <li
                     key={item}
@@ -210,16 +206,16 @@ export default function Home() {
             <div className="lg:col-span-5 space-y-16 border-l border-white/10 pl-0 lg:pl-12 pt-12 lg:pt-0">
               <div>
                 <h3 className="text-2xl font-serif mb-6 text-white/90">
-                  Advisory Services
+                  Add-On Support
                 </h3>
                 <p className="text-sm text-white/50 font-sans mb-6">
-                  Service available for existing teams.
+                  Available as an add-on for families and existing teams.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Document Review",
-                    "Risk Assessment",
-                    "Logistics Planning",
+                    "A&amp;R / Feature Coordination",
+                    "Musical Direction",
+                    "Performance Coaching",
                   ].map((item) => (
                     <li
                       key={item}
@@ -233,16 +229,16 @@ export default function Home() {
 
               <div>
                 <h3 className="text-2xl font-serif mb-6 text-white/90">
-                  Project Consultation
+                  Creative Direction
                 </h3>
                 <p className="text-sm text-white/50 font-sans mb-6">
-                  Service available for specific campaigns.
+                  Vetted third-party support as needed for visuals and creative execution.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Release Coordination",
-                    "Production Oversight",
-                    "Media Relations",
+                    "Visual Direction (3rd-party)",
+                    "Content &amp; Presentation (3rd-party)",
+                    "Release Planning (as needed)",
                   ].map((item) => (
                     <li
                       key={item}
@@ -283,10 +279,10 @@ export default function Home() {
       <section className="py-32 px-6 text-center">
         <div className="container mx-auto max-w-2xl space-y-8">
           <h2 className="text-4xl md:text-5xl font-serif text-white">
-            Application Process
+            Request a Strategy Call
           </h2>
           <p className="text-muted-foreground font-sans text-lg">
-            New client intake is conducted quarterly based on capacity.
+            The first step is a brief call to confirm fit, goals, and the right next moves.
           </p>
           <div className="pt-8">
             <ArrowRight
@@ -301,9 +297,9 @@ export default function Home() {
       <section id="contact" className="py-24 px-6 bg-white text-black">
         <div className="container mx-auto max-w-3xl">
           <div className="mb-16">
-            <h2 className="text-4xl font-serif mb-4">Consultation Request</h2>
+            <h2 className="text-4xl font-serif mb-4">Request a Strategy Call</h2>
             <p className="text-muted-foreground font-sans text-sm uppercase tracking-wider">
-              Submit required information.
+              Share a few details and we’ll follow up if it’s a fit.
             </p>
           </div>
 
