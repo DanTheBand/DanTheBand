@@ -18,10 +18,10 @@ export default function Home() {
           <img
             src="/images/hero-bg.png"
             alt="Dark atmospheric recording studio background texture"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-70 brightness-80"
             role="presentation"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background/80" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-12">
@@ -30,14 +30,14 @@ export default function Home() {
             <span className="italic text-white/70">for Emerging Artists.</span>
           </h1>
 
-          <p className="text-lg md:text-xl font-sans text-muted-foreground max-w-2xl mx-auto tracking-wide">
+          <p className="text-lg md:text-xl font-sans text-white/70 max-w-2xl mx-auto tracking-wide">
             Bespoke, real-world guidance to help emerging artists build an industry-ready foundation.
           </p>
 
           <div className="pt-12">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-white/90 rounded-none px-12 py-8 text-sm uppercase tracking-widest font-bold transition-colors duration-300"
+              className="bg-white text-black hover:bg-white/90 rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-colors duration-300"
               onClick={() =>
                 document
                   .getElementById("contact")
@@ -51,246 +51,227 @@ export default function Home() {
       </section>
 
       {/* 2. ORIENTATION */}
-      <section className="py-24 md:py-32 px-6 border-t border-white/5">
-        <div className="container max-w-3xl mx-auto space-y-16">
+      <section className="relative py-24 md:py-32 px-6 border-t border-white/5 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/Singer.jpg"
+            alt="Singer performing live on stage"
+            className="w-full h-full object-cover opacity-70 brightness-75"
+            role="presentation"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-background/90" />
+        </div>
+        <div className="container max-w-3xl mx-auto space-y-16 relative z-10">
           <div className="space-y-10">
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
-              Designed for those taking a long-term view — building a solid, sustainable foundation.
+              Designed for those taking a long-term view building a solid, sustainable foundation.
             </p>
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/70">
-              Decisions are tuned to the artist's lane, goals, and current level — with clarity on what matters next.
+            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/800">
+              Decisions are tuned to the artist's lane, goals, and current level with a clear path mapped out for the greatest possible success.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/50">
-              Availability is limited. The first step is a strategy call to confirm alignment.
+              Limited Availability. The first step is a strategy call to confirm alignment.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. AUTHORITY */}
-      <section className="py-24 bg-white/5">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-4 flex flex-col justify-center items-start">
-              <img
-                src="/images/brand-mark.png"
-                alt="Artist Development Company Logo"
-                className="w-24 h-24 mb-8 opacity-80 invert"
-              />
-              <div className="text-5xl md:text-6xl font-serif text-white/90 mb-2 tracking-tight">20+</div>
-              <div className="text-sm font-sans uppercase tracking-widest text-muted-foreground">
-                Years in the Industry
-              </div>
-            </div>
-
-            <div className="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-              {/* Logo Placeholders */}
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="h-24 border border-white/10 flex items-center justify-center bg-black/20"
-                >
-                  <span className="font-sans text-xs tracking-widest">
-                    PARTNER {i}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              "Strategic Direction",
-              "Industry Guidance",
-              "Creative Production",
-            ].map((milestone, i) => (
-              <div key={i} className="border-t border-white/20 pt-6">
-                <h3 className="text-xl font-serif text-white/90">
-                  {milestone}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. APPROACH */}
-      <section className="py-32 px-6 relative">
+      {/* 3. CONTEXT */}
+      <section className="relative py-24 bg-white/5 overflow-hidden">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/images/studio-abstract.png"
-            alt="Studio Abstract"
-            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+            alt="Studio Abstract Texture"
+            className="w-full h-full object-cover opacity-30 brightness-110"
+            role="presentation"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
         </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-4 flex flex-col justify-center items-start">
+              <img
+                src="/images/logo.jpg"
+                alt="DanTheBand Logo"
+                className="w-50 h-50 mb-6 opacity-100 invert"
+              />
+            </div>
 
-        <div className="container relative z-10 mx-auto">
-          <div className="mb-20">
-            <h2 className="text-sm font-sans uppercase tracking-[0.2em] text-muted-foreground mb-4">
-              Methodology
-            </h2>
-            <Separator className="bg-white/20" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-20">
-            {[
-              {
-                title: "Creative Direction",
-                desc: "Shape the sound, image, and choices so everything points to one clear identity.",
-              },
-              {
-                title: "Industry Clarity",
-                desc: "Cut through noise and focus on the moves that actually change outcomes.",
-              },
-              {
-                title: "Networked Perspective",
-                desc: "Guidance informed by real relationships and how decisions work in practice.",
-              },
-              {
-                title: "Performance & Presentation",
-                desc: "Prepare your artist to show up confidently — on stage, in sessions, and in rooms that matter.",
-              },
-            ].map((principle, i) => (
-              <div key={i} className="group">
-                <div className="text-xs font-sans text-white/30 mb-4">
-                  0{i + 1}
-                </div>
-                <h3 className="text-3xl font-serif text-white mb-4 group-hover:text-white/80 transition-colors">
-                  {principle.title}
-                </h3>
-                <p className="text-muted-foreground font-sans leading-relaxed max-w-md">
-                  {principle.desc}
+            <div className="md:col-span-8">
+              <div className="space-y-8">
+                <p className="text-2xl md:text-3xl font-serif text-white/85 leading-relaxed max-w-2xl">
+                  Practitioner-led guidance shaped by real-world work, from the biggest stages, to the major studios, and in the rooms where decisions get made.
                 </p>
+
+                <p className="text-xl md:text-2xl font-serif text-white/80 leading-relaxed max-w-2xl">
+                  Touring and studio work includes Sean Paul, Ellie Goulding, Madison Beer, and Fabolous, and more.
+                </p>
+                <div className="pt-2">
+                  <p className="text-sm text-white/65 font-sans">
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* 5. CAPABILITIES */}
-      <section className="py-32 bg-black text-white px-6">
+      <section className="relative py-32 bg-black text-white px-6 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/microphone.jpg"
+            alt="Microphone on stage"
+            className="w-full h-full object-cover opacity-70 brightness-90"
+            role="presentation"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+        </div>
+        <div className="relative z-10">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            {/* Core Capability */}
-            <div className="lg:col-span-7 space-y-10">
-              <div className="inline-block border border-white/20 px-4 py-2 text-xs font-sans uppercase tracking-widest mb-4">
-                Primary Service
+            {/* Intro */}
+            <div className="lg:col-span-5 space-y-8">
+              <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/40">
+                Capabilities
               </div>
               <h2 className="text-5xl md:text-6xl font-serif leading-tight">
-                Production <br /> &amp; Artist Development
+                A small number of levers,
+                <br />
+                pulled with care.
               </h2>
-              <p className="text-xl text-white/60 font-sans max-w-xl leading-relaxed">
-                High-caliber, strategic work to develop the artist — the music, the direction, and the plan — with taste and professional standards.
+              <p className="text-lg md:text-xl text-white/90 font-sans max-w-xl leading-relaxed">
+                Hands-on development built for longevity, taste-led decisions, professional standards, and a clear plan
+                for what matters next.
               </p>
 
-              <ul className="space-y-6 mt-8">
-                {[
-                  "Songwriting & Production",
-                  "Repertoire & Direction",
-                  "Brand & Positioning",
-                  "Team & Infrastructure",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-4 text-white/80 font-sans text-lg"
-                  >
-                    <div className="w-1.5 h-1.5 bg-white rounded-full" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <div className="pt-10 border-t border-white/10 space-y-10">
+                <div>
+                  <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/80">
+                    Approach
+                  </div>
+                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    {[
+                      {
+                        n: "01",
+                        title: "Find your lane",
+                        desc: "Clarify what fits, what doesn’t, and where focus actually pays off.",
+                      },
+                      {
+                        n: "02",
+                        title: "Set your direction",
+                        desc: "Align sound, priorities, and decisions around one clear identity.",
+                      },
+                      {
+                        n: "03",
+                        title: "Raise your standard",
+                        desc: "Develop material and execution until it reads as professional.",
+                      },
+                      {
+                        n: "04",
+                        title: "Prepare for the moment",
+                        desc: "Support performance and presentation so the artist shows up ready.",
+                      },
+                    ].map((step) => (
+                      <div key={step.n} className="space-y-3">
+                        <div className="text-xs font-sans text-white/80 tracking-widest">{step.n}</div>
+                        <div className="text-xl font-serif text-white/95">{step.title}</div>
+                        <p className="text-sm text-white/90 font-sans leading-relaxed">
+                          {step.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-            {/* Secondary Support */}
-            <div className="lg:col-span-5 space-y-16 border-l border-white/10 pl-0 lg:pl-12 pt-12 lg:pt-0">
-              <div>
-                <h3 className="text-2xl font-serif mb-6 text-white/90">
-                  Add-On Support
-                </h3>
-                <p className="text-sm text-white/50 font-sans mb-6">
-                  Available as an add-on for established teams or independent artists.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "A&amp;R / Feature Coordination",
-                    "Musical Direction",
-                    "Performance Coaching",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="text-white/70 font-sans text-sm border-b border-white/5 pb-3"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-serif mb-6 text-white/90">
-                  Creative Direction
-                </h3>
-                <p className="text-sm text-white/50 font-sans mb-6">
-                  Vetted third-party support as needed for visuals and creative execution.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Visual Direction (3rd-party)",
-                    "Content &amp; Presentation (3rd-party)",
-                    "Release Planning (as needed)",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="text-white/70 font-sans text-sm border-b border-white/5 pb-3"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* 6. TRUST & PROOF */}
-      <section className="py-32 px-6 border-y border-white/5 bg-white/[0.02]">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="mb-12">
-            <img
-              src="/images/brand-mark.png"
-              alt=""
-              className="w-12 h-12 mx-auto opacity-50 invert mb-8"
-              aria-hidden="true"
-            />
-            <blockquote className="text-3xl md:text-4xl font-serif leading-relaxed text-white/90 italic">
-              "Statement regarding the effectiveness and professional nature of
-              the provided consultation services."
-            </blockquote>
-            <div className="mt-10 font-sans text-sm tracking-widest text-white/50 uppercase">
-              — Client Reference, 2024
+            {/* Pillars */}
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                {/* Strategic Direction */}
+                <div className="border-t border-white/15 pt-8">
+                  <h3 className="text-2xl font-serif text-white/90 mb-4">Strategic Direction</h3>
+                  <p className="text-sm text-white/55 font-sans leading-relaxed">
+                    Define the lane, remove noise, and set decisions that compound.
+                  </p>
+                  <ul className="space-y-3 mt-6">
+                    {[
+                      "Positioning & lane clarity",
+                      "Priorities and next moves",
+                      "Release pacing & milestones",
+                      "6–12 month roadmap",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-white/75 font-sans text-sm"
+                      >
+                        <span className="mt-2 w-1.5 h-1.5 bg-white/70 rounded-full shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Industry Guidance */}
+                <div className="border-t border-white/15 pt-8">
+                  <h3 className="text-2xl font-serif text-white/90 mb-4">Industry Guidance</h3>
+                  <p className="text-sm text-white/55 font-sans leading-relaxed">
+                    Real-world decision support, without chasing trends.
+                  </p>
+                  <ul className="space-y-3 mt-6">
+                    {[
+                      "What matters / what doesn’t",
+                      "Team & infrastructure filtering",
+                      "Timing and strategy checks",
+                      "Introductions when appropriate",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-white/75 font-sans text-sm"
+                      >
+                        <span className="mt-2 w-1.5 h-1.5 bg-white/70 rounded-full shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Creative Production */}
+                <div className="border-t border-white/15 pt-8">
+                  <h3 className="text-2xl font-serif text-white/90 mb-4">Creative Production</h3>
+                  <p className="text-sm text-white/55 font-sans leading-relaxed">
+                    Work that reads as professional, cohesive, intentional, and ready.
+                  </p>
+                  <ul className="space-y-3 mt-6">
+                    {[
+                      "Song development & production",
+                      "Repertoire & selection",
+                      "Vocal & performance preparation",
+                      "Cohesive body of work",
+                    ].map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-white/75 font-sans text-sm"
+                      >
+                        <span className="mt-2 w-1.5 h-1.5 bg-white/70 rounded-full shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* 7. CTA TRANSITION */}
-      <section className="py-32 px-6 text-center">
-        <div className="container mx-auto max-w-2xl space-y-8">
-          <h2 className="text-4xl md:text-5xl font-serif text-white">
-            Request a Strategy Call
-          </h2>
-          <p className="text-muted-foreground font-sans text-lg">
-            The first step is a brief call to confirm fit, goals, and the right next moves.
-          </p>
-          <div className="pt-8">
-            <ArrowRight
-              className="w-6 h-6 mx-auto text-white/50"
-              aria-hidden="true"
-            />
-          </div>
         </div>
       </section>
+
 
       {/* 8. CONTACT / APPLICATION */}
       <section id="contact" className="py-24 px-6 bg-white text-black">
@@ -311,7 +292,7 @@ export default function Home() {
         className="py-12 bg-black text-white/30 text-center text-xs font-sans uppercase tracking-widest border-t border-white/10"
       >
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-          <p>&copy; 2025 Artist Development. All Rights Reserved.</p>
+          <p>&copy; 2025 DanTheBand. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link
               href="/privacy"
@@ -388,7 +369,7 @@ function ApplicationForm() {
         </div>
         <h3 className="text-3xl font-serif">Submission Received</h3>
         <p className="text-muted-foreground font-sans max-w-md mx-auto">
-          Information has been recorded. We'll follow up if its a fit.
+          Information has been recorded. We’ll follow up if it’s a fit.
         </p>
       </div>
     );
@@ -405,7 +386,6 @@ function ApplicationForm() {
           />
         ))}
       </div>
-
       {step === 1 && (
         <div className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -469,7 +449,7 @@ function ApplicationForm() {
         <div className="space-y-8">
           <div className="space-y-6">
             <Label className="font-sans text-xs uppercase tracking-wider text-gray-500">
-              Budget Allocation (Monthly)
+              Budget Range (Monthly)
             </Label>
             <p className="text-sm text-muted-foreground mb-4 font-serif italic">
               Select the applicable monthly budget range.
@@ -529,8 +509,7 @@ function ApplicationForm() {
               Confirmation
             </p>
             <p>
-              Submission acknowledges this is a request for information, not a
-              guarantee of service.
+              Submitting this form requests a strategy call. Availability is limited and not every request is accepted.
             </p>
           </div>
 
@@ -564,7 +543,7 @@ function ApplicationForm() {
           {isSubmitting
             ? "Submitting..."
             : step === 3
-              ? "Submit Request"
+              ? "Request Strategy Call"
               : "Next Step"}
           {!isSubmitting && (
             <ChevronRight className="ml-2 w-4 h-4" aria-hidden="true" />

@@ -42,7 +42,7 @@ export default function TermsOfService() {
               2. Description of Service
             </h2>
             <p>
-              We provide artist development and management consultation
+              We provide artist development and consultation
               services. The content on this website is for informational
               purposes only and does not constitute a binding offer of
               representation or employment.
