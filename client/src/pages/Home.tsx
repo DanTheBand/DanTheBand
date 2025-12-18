@@ -39,7 +39,7 @@ export default function Home() {
           <div className="pt-12">
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-white/90 rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-colors duration-300"
+              className="bg-black text-white hover:bg-black/80 rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-colors duration-300"
               onClick={() =>
                 document
                   .getElementById("contact")
@@ -280,11 +280,21 @@ export default function Home() {
 
 
       {/* 8. CONTACT / APPLICATION */}
-      <section id="contact" className="py-24 px-6 bg-white text-black">
-        <div className="container mx-auto max-w-3xl">
+      <section id="contact" className="relative py-24 px-0 bg-black text-white w-full overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/piano.jpg"
+            alt="Dark grand piano background texture"
+            className="w-full h-full object-cover opacity-70 brightness-80"
+            role="presentation"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="container mx-auto max-w-3xl p-8 relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl font-serif mb-4">Request a Strategy Call</h2>
-            <p className="text-muted-foreground font-sans text-sm uppercase tracking-wider">
+            <p className="text-white/80 font-sans text-sm uppercase tracking-wider">
               Share a few details and we’ll follow up if it’s a fit.
             </p>
           </div>
@@ -329,7 +339,14 @@ function ApplicationForm() {
     goals: "",
   });
 
-  const handleNext = () => setStep(step + 1);
+  const handleNext = () => {
+    if (step === 1 && !formData.email.trim()) {
+      setError("Please enter a valid email address before continuing.");
+      return;
+    }
+    setError(null);
+    setStep(step + 1);
+  };
   const handleBack = () => setStep(step - 1);
 
   const handleSubmit = async () => {
@@ -383,7 +400,7 @@ function ApplicationForm() {
   }
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 bg-black rounded-xl p-8 shadow-lg">
       {/* Progress Indicator */}
       <div className="flex gap-2 mb-12">
         {[1, 2, 3].map((i) => (
@@ -395,6 +412,11 @@ function ApplicationForm() {
       </div>
       {step === 1 && (
         <div className="space-y-8">
+          {error && (
+            <div className="bg-red-50 text-red-600 p-4 text-sm font-sans">
+              {error}
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-3">
               <Label
