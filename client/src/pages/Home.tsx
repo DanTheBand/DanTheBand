@@ -271,6 +271,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Long-term Value Statement */}
+      <section className="py-20 bg-black text-white px-6">
+        <div className="container mx-auto max-w-3xl text-center">
+          <p className="text-xl md:text-2xl font-serif text-white leading-relaxed">
+            The long-term value of an artist’s catalog is shaped far earlier than most people realize.
+          </p>
+        </div>
+      </section>
+
 
       {/* 8. CONTACT / APPLICATION */}
       <section id="contact" className="relative py-24 px-0 bg-black text-white w-full overflow-hidden">
