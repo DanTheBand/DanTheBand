@@ -25,13 +25,15 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-12">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white">
-            Artist Development <br />
-            <span className="italic text-white/70">for Emerging Artists.</span>
-          </h1>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white">
+              Artist Development <br />
+              <span className="italic text-white/70">The Right Way, From the Start.</span>
+            </h1>
+
 
           <p className="text-lg md:text-xl font-sans text-white/70 max-w-2xl mx-auto tracking-wide">
-            Bespoke, real-world guidance to help emerging artists build an industry-ready foundation.
+            A private advisory for those investing seriously in an artist’s career, 
+            focused on building the right foundation from day one.
           </p>
 
           <div className="pt-12">
@@ -65,13 +67,15 @@ export default function Home() {
         <div className="container max-w-3xl mx-auto space-y-16 relative z-10">
           <div className="space-y-10">
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
-              Designed for those taking a long-term view building a solid, sustainable foundation.
+              Designed for those taking a long-term view — where early decisions compound over time.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/800">
-              Decisions are tuned to the artist's lane, goals, and current level with a clear path mapped out for the greatest possible success.
+              Direction is set relative to the artist’s lane, goals, and current level 
+              with attention paid to what must be addressed now, what should wait,
+              and what should be avoided entirely.
             </p>
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/50">
-              Limited Availability. The first step is a strategy call to confirm alignment.
+              Availability is limited.
             </p>
           </div>
         </div>
@@ -102,11 +106,13 @@ export default function Home() {
             <div className="md:col-span-8">
               <div className="space-y-8">
                 <p className="text-2xl md:text-3xl font-serif text-white/85 leading-relaxed max-w-2xl">
-                  Practitioner-led guidance shaped by real-world work, from the biggest stages, to the major studios, and in the rooms where decisions get made.
+                  Practitioner-led guidance shaped by real-world work,
+                  from the biggest stages, to the major studios,
+                  and in the rooms where decisions get made.
                 </p>
 
                 <p className="text-xl md:text-2xl font-serif text-white/80 leading-relaxed max-w-2xl">
-                  Touring and studio work includes Sean Paul, Ellie Goulding, Madison Beer, and Fabolous, and more.
+                  Touring and studio work includes Sean Paul, Ellie Goulding, Madison Beer, and Fabolous, among others.
                 </p>
                 <div className="pt-2">
                   <p className="text-sm text-white/65 font-sans">
@@ -126,7 +132,7 @@ export default function Home() {
           <img
             src="/images/microphone.jpg"
             alt="Microphone on stage"
-            className="w-full h-full object-cover opacity-70 brightness-90"
+            className="w-full h-full object-cover opacity-70 brightness-90 scale-100 md:scale-100 sm:scale-95"
             role="presentation"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
@@ -145,8 +151,8 @@ export default function Home() {
                 pulled with care.
               </h2>
               <p className="text-lg md:text-xl text-white/90 font-sans max-w-xl leading-relaxed">
-                Hands-on development built for longevity, taste-led decisions, professional standards, and a clear plan
-                for what matters next.
+                Hands-on development focused on critical decisions,
+                made in sequence, with long-term growth in mind.
               </p>
 
               <div className="pt-10 border-t border-white/10 space-y-10">
