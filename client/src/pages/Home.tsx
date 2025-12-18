@@ -90,20 +90,19 @@ export default function Home() {
             alt="Singer performing live on stage"
             className="w-full h-full object-cover opacity-70 brightness-75"
             role="presentation"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-background/90" />
         </div>
         <div className="container max-w-3xl mx-auto space-y-16 relative z-10">
           <div className="space-y-10">
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
+            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/90">
               Designed for those taking a long-term view — where early decisions compound over time.
             </p>
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
-              Direction is set relative to the artist’s lane, goals, and current level 
-              with attention paid to what must be addressed now, what should wait,
-              and what should be avoided entirely.
+            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/90">
+              Direction is set relative to the artist’s lane, goals, and current level with attention paid to what must be addressed now, what should wait, and what should be avoided entirely.
             </p>
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/50">
+            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/50">
               Availability is limited.
             </p>
           </div>
@@ -115,10 +114,11 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/studio-abstract.png"
+            src="/images/studio-abstract.jpg"
             alt="Studio Abstract Texture"
             className="w-full h-full object-cover opacity-30 brightness-110"
             role="presentation"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
         </div>
@@ -129,18 +129,16 @@ export default function Home() {
                 src="/images/logo.jpg"
                 alt="DanTheBand Logo"
                 className="w-50 h-50 mb-6 opacity-100 invert"
+                loading="lazy"
               />
             </div>
 
             <div className="md:col-span-8">
               <div className="space-y-8">
-                <p className="text-2xl md:text-3xl font-serif text-white/85 leading-relaxed max-w-2xl">
-                  Practitioner-led guidance shaped by real-world work,
-                  from the biggest stages, to the major studios,
-                  and in the rooms where decisions get made.
+                <p className="text-2xl md:text-3xl font-sans text-white/85 leading-relaxed max-w-2xl">
+                  Practitioner-led guidance shaped by real-world work, from the biggest stages, to the major studios, and in the rooms where decisions get made.
                 </p>
-
-                <p className="text-xl md:text-2xl font-serif text-white/80 leading-relaxed max-w-2xl">
+                <p className="text-xl md:text-2xl font-sans text-white/80 leading-relaxed max-w-2xl">
                   Touring and studio work includes Sean Paul, Ellie Goulding, Madison Beer, and Fabolous, among others.
                 </p>
                 <div className="pt-2">
@@ -163,6 +161,7 @@ export default function Home() {
             alt="Microphone on stage"
             className="w-full h-full object-cover opacity-70 brightness-90 scale-100 md:scale-100 sm:scale-95"
             role="presentation"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
         </div>
@@ -476,11 +475,11 @@ function ApplicationForm() {
       {step === 2 && (
         <div className="space-y-8">
           <div className="space-y-6">
-            <Label className="font-sans text-xs uppercase tracking-wider text-gray-500">
+            <Label className="font-sans text-xs uppercase tracking-wider text-white">
               Budget Range (Monthly)
             </Label>
-            <p className="text-sm text-muted-foreground mb-4 font-serif italic">
-              Select the applicable monthly budget range.
+            <p className="text-sm text-white mb-4 font-sans uppercase tracking-wider">
+              Select the level of ongoing investment you’re prepared to commit.
             </p>
             <RadioGroup
               value={formData.budget}
