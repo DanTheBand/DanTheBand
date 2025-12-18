@@ -296,9 +296,6 @@ export default function Home() {
         <div className="container mx-auto max-w-3xl p-8 relative z-10">
           <div className="mb-16">
             <h2 className="text-4xl font-serif mb-4">Request a Strategy Call</h2>
-            <p className="text-white/80 font-sans text-sm uppercase tracking-wider">
-              Share a few details and we’ll follow up if it’s a fit.
-            </p>
           </div>
 
           <ApplicationForm />
