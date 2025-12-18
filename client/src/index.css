@@ -99,7 +99,7 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     /* Add grain texture overlay */
-    background-image: url("/images/texture-overlay.png");
+    background-image: url("/images/texture-overlay.jpg");
     background-blend-mode: overlay;
     background-attachment: fixed;
     background-size: 200px;

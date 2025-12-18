@@ -16,7 +16,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/hero-bg.png"
+            src="/images/hero-bg.jpg"
             alt="Dark atmospheric recording studio background texture"
             className="w-full h-full object-cover opacity-70 brightness-80"
             role="presentation"
