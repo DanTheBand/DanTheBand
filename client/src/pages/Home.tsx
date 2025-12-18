@@ -300,10 +300,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
           <p>&copy; 2025 DanTheBand. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <Link
-              href="/privacy"
-              className="hover:text-white transition-colors"
-            >
+            <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <Link href="/terms" className="hover:text-white transition-colors">
@@ -311,6 +308,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        <p className="sr-only">
+          This site describes a private artist development advisory focused on sequencing decisions, long-term growth, and professional readiness in music careers.
+        </p>
       </footer>
     </main>
   );
