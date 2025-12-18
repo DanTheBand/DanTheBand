@@ -39,15 +39,44 @@ export default function Home() {
           <div className="pt-12">
             <Button
               size="lg"
-              className="bg-black text-white hover:bg-black/80 rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-colors duration-300"
-              onClick={() =>
+              className="bg-black text-white rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-all duration-200 shadow-[0_4px_32px_0_rgba(255,255,255,0.04)] relative overflow-hidden hover:bg-neutral-800 hover:text-white hover:shadow-[0_8px_48px_0_rgba(255,255,255,0.10)] hover:scale-105 active:scale-95"
+              style={{ position: 'relative' }}
+              onClick={e => {
+                // Micro-interaction ripple effect
+                const btn = e.currentTarget;
+                const circle = document.createElement('span');
+                const diameter = Math.max(btn.clientWidth, btn.clientHeight);
+                const radius = diameter / 2;
+                circle.style.width = circle.style.height = `${diameter}px`;
+                circle.style.left = `${e.clientX - btn.getBoundingClientRect().left - radius}px`;
+                circle.style.top = `${e.clientY - btn.getBoundingClientRect().top - radius}px`;
+                circle.className = 'ripple-effect';
+                btn.appendChild(circle);
+                setTimeout(() => circle.remove(), 600);
                 document
                   .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Request Strategy Call
             </Button>
+            <style>{`
+              .ripple-effect {
+                position: absolute;
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                background: rgba(255,255,255,0.15);
+                pointer-events: none;
+                z-index: 2;
+              }
+              @keyframes ripple {
+                to {
+                  transform: scale(2.5);
+                  opacity: 0;
+                }
+              }
+            `}</style>
           </div>
         </div>
       </section>
@@ -69,7 +98,7 @@ export default function Home() {
             <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
               Designed for those taking a long-term view — where early decisions compound over time.
             </p>
-            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/800">
+            <p className="text-2xl md:text-3xl font-serif leading-relaxed text-white/90">
               Direction is set relative to the artist’s lane, goals, and current level 
               with attention paid to what must be addressed now, what should wait,
               and what should be avoided entirely.
@@ -204,72 +233,36 @@ export default function Home() {
                 <div className="border-t border-white/15 pt-8">
                   <h3 className="text-2xl font-serif text-white/90 mb-4">Strategic Direction</h3>
                   <p className="text-sm text-white/55 font-sans leading-relaxed">
-                    Define the lane, remove noise, and set decisions that compound.
+                    Clarifying the artist’s lane and sequencing decisions that shape long-term value.
                   </p>
-                  <ul className="space-y-3 mt-6">
-                    {[
-                      "Positioning & lane clarity",
-                      "Priorities and next moves",
-                      "Release pacing & milestones",
-                      "6–12 month roadmap",
-                    ].map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-white/75 font-sans text-sm"
-                      >
-                        <span className="mt-2 w-1.5 h-1.5 bg-white/70 rounded-full shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                    This engagement focuses on positioning, priorities, and timing, ensuring early decisions support not just momentum,
+                    but the long-term integrity of the artist’s catalog.
+                  </p>
                 </div>
 
                 {/* Industry Guidance */}
                 <div className="border-t border-white/15 pt-8">
                   <h3 className="text-2xl font-serif text-white/90 mb-4">Industry Guidance</h3>
-                  <p className="text-sm text-white/55 font-sans leading-relaxed">
-                    Real-world decision support, without chasing trends.
+                 <p className="text-sm text-white/55 font-sans leading-relaxed">
+                    Decision support informed by real-world industry context.
                   </p>
-                  <ul className="space-y-3 mt-6">
-                    {[
-                      "What matters / what doesn’t",
-                      "Team & infrastructure filtering",
-                      "Timing and strategy checks",
-                      "Introductions when appropriate",
-                    ].map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-white/75 font-sans text-sm"
-                      >
-                        <span className="mt-2 w-1.5 h-1.5 bg-white/70 rounded-full shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                    This engagement centers on evaluating opportunities, filtering teams and collaborators, and pressure-testing timing —
+                    with an emphasis on protecting long-term creative ownership and direction.
+                  </p>
                 </div>
 
                 {/* Creative Production */}
                 <div className="border-t border-white/15 pt-8">
                   <h3 className="text-2xl font-serif text-white/90 mb-4">Creative Production</h3>
-                  <p className="text-sm text-white/55 font-sans leading-relaxed">
-                    Work that reads as professional, cohesive, intentional, and ready.
-                  </p>
-                  <ul className="space-y-3 mt-6">
-                    {[
-                      "Song development & production",
-                      "Repertoire & selection",
-                      "Vocal & performance preparation",
-                      "Cohesive body of work",
-                    ].map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-white/75 font-sans text-sm"
-                      >
-                        <span className="mt-2 w-1.5 h-1.5 bg-white/70 rounded-full shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                 <p className="text-sm text-white/55 font-sans leading-relaxed">
+                      Hands-on development focused on work that endures.
+                    </p>
+                    <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                      This engagement focuses on shaping material, performance, and presentation so the work reads as intentional,
+                      cohesive, and worthy of standing as part of a lasting catalog.
+                    </p>
                 </div>
               </div>
             </div>
@@ -492,12 +485,12 @@ function ApplicationForm() {
                 (range) => (
                   <div
                     key={range}
-                    className={`flex items-center space-x-4 border p-6 transition-colors cursor-pointer ${formData.budget === range ? "border-black bg-black text-white" : "border-black/10 hover:border-black/30"}`}
+                    className={`flex items-center space-x-4 border p-6 transition-colors cursor-pointer ${formData.budget === range ? "bg-black text-white border-white" : "bg-neutral-900 text-white/80 border-white/20 hover:border-white/40"}`}
                   >
                     <RadioGroupItem
                       value={range}
                       id={range}
-                      className={`border-current ${formData.budget === range ? "text-white" : "text-black"}`}
+                      className={`border-current ${formData.budget === range ? "text-white" : "text-black"} w-7 h-7 min-w-[1.75rem] min-h-[1.75rem]`} // Increased size
                     />
                     <Label
                       htmlFor={range}
@@ -533,8 +526,8 @@ function ApplicationForm() {
             />
           </div>
 
-          <div className="bg-gray-50 p-8 text-sm text-muted-foreground font-sans border-l-2 border-black">
-            <p className="mb-2 font-bold text-black uppercase tracking-wider text-xs">
+          <div className="bg-black p-8 text-sm text-white/80 font-sans border-l-2 border-white/30">
+            <p className="mb-2 font-bold text-white uppercase tracking-wider text-xs">
               Confirmation
             </p>
             <p>
