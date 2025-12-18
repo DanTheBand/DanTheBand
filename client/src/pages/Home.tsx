@@ -126,7 +126,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-4 flex flex-col justify-center items-start">
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="DanTheBand Logo"
                 className="w-50 h-50 mb-6 opacity-100 invert"
                 loading="lazy"
