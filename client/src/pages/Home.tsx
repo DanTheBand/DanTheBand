@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { useState } from "react";
@@ -10,7 +9,7 @@ import { Link } from "wouter";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col bg-background text-foreground selection:bg-white/20">
+    <main className="min-h-screen flex flex-col bg-background text-foreground selection:bg-white/10">
       {/* 1. HERO */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
         {/* Background Image */}
@@ -23,16 +22,15 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background/80" />
         </div>
-            {/* Approach — full width */}
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-12">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white/90">
               Artist Development <br />
-              <span className="italic text-white/70">The Right Way, From the Start.</span>
+              <span className="italic text-white/84">The Right Way, From the Start.</span>
             </h1>
 
 
-          <p className="text-lg md:text-xl font-sans text-white/70 max-w-2xl mx-auto tracking-wide">
+          <p className="text-lg md:text-xl font-sans text-white/84 max-w-2xl mx-auto tracking-wide">
             A private advisory for those investing seriously in an artist’s career, 
             focused on building the right foundation from day one.
           </p>
@@ -40,7 +38,7 @@ export default function Home() {
           <div className="pt-12">
             <Button
               size="lg"
-              className="bg-black text-white rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-all duration-200 shadow-[0_4px_32px_0_rgba(255,255,255,0.04)] relative overflow-hidden hover:bg-neutral-800 hover:text-white hover:shadow-[0_8px_48px_0_rgba(255,255,255,0.10)] hover:scale-105 active:scale-95"
+              className="bg-black text-white/90 rounded-none px-12 py-8 text-lg md:text-xl uppercase tracking-widest font-bold transition-all duration-200 shadow-[0_4px_32px_0_rgba(255,255,255,0.04)] relative overflow-hidden hover:bg-neutral-800 hover:text-white/100 hover:shadow-[0_8px_48px_0_rgba(255,255,255,0.10)] hover:scale-105 active:scale-95"
               style={{ position: 'relative' }}
               onClick={e => {
                 // Micro-interaction ripple effect
@@ -97,13 +95,13 @@ export default function Home() {
         </div>
         <div className="container max-w-3xl mx-auto space-y-16 relative z-10">
           <div className="space-y-10">
-            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/90">
+            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/100">
               Designed for those taking a long-term view — where early decisions compound over time.
             </p>
-            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/90">
+            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/100">
               Direction is set relative to the artist’s lane, goals, and current level with attention paid to what must be addressed now, what should wait, and what should be avoided entirely.
             </p>
-            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/50">
+            <p className="text-2xl md:text-3xl font-sans leading-relaxed text-white/90">
               Availability is limited.
             </p>
           </div>
@@ -136,14 +134,14 @@ export default function Home() {
 
             <div className="md:col-span-8">
               <div className="space-y-8">
-                <p className="text-2xl md:text-3xl font-sans text-white/85 leading-relaxed max-w-2xl">
+                <p className="text-2xl md:text-3xl font-sans text-white/100 leading-relaxed max-w-2xl">
                   Practitioner-led guidance shaped by real-world work, from the biggest stages, to the major studios, and in the rooms where decisions get made.
                 </p>
-                <p className="text-xl md:text-2xl font-sans text-white/80 leading-relaxed max-w-2xl">
+                <p className="text-xl md:text-2xl font-sans text-white/100 leading-relaxed max-w-2xl">
                   Touring and studio work includes Sean Paul, Ellie Goulding, Madison Beer, and Fabolous, among others.
                 </p>
                 <div className="pt-2">
-                  <p className="text-sm text-white/65 font-sans">
+                  <p className="text-sm text-white/85 font-sans">
                   </p>
                 </div>
               </div>
@@ -151,141 +149,119 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* 5. CAPABILITIES */}
+<section className="relative py-32 bg-black text-white px-6 overflow-hidden">
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/images/microphone.jpg"
+      alt="Microphone on stage"
+      className="w-full h-full object-cover opacity-70 brightness-90"
+      role="presentation"
+      loading="lazy"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+  </div>
 
-      {/* 5. CAPABILITIES */}
-      <section className="relative py-32 bg-black text-white px-6 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/microphone.jpg"
-            alt="Microphone on stage"
-            className="w-full h-full object-cover opacity-70 brightness-90 scale-100 md:scale-100 sm:scale-95"
-            role="presentation"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+  <div className="relative z-10">
+    <div className="container mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        {/* Intro */}
+        <div className="lg:col-span-5">
+          <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/40">
+            Capabilities
+          </div>
+
+          <h2 className="mt-6 text-5xl md:text-6xl font-serif leading-tight">
+            A small number of levers,
+            <br />
+            pulled with care.
+          </h2>
+
+          <p className="mt-6 text-lg md:text-xl text-white/90 font-sans max-w-xl leading-relaxed">
+            Hands-on development focused on critical decisions, made in sequence,
+            with long-term growth in mind.
+          </p>
         </div>
 
-        <div className="relative z-10">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-              {/* Intro */}
-              <div className="lg:col-span-5">
-                <div className="text-xl md:text-2xl font-sans uppercase tracking-[0.2em] text-white/80">
-                  Capabilities
-                </div>
+        {/* Pillars */}
+        <div className="lg:col-span-7">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Strategic Direction */}
+            <div className="border-t border-white/15 pt-8">
+              <h3 className="text-2xl font-serif text-white/90 mb-4">
+                Strategic Direction
+              </h3>
+              <p className="text-sm text-white/55 font-sans leading-relaxed">
+                Clarifying the artist’s lane and sequencing decisions that shape long-term value.
+              </p>
+              <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                This engagement focuses on positioning, priorities, and timing, ensuring early decisions
+                support not just momentum, but the long-term integrity of the artist’s catalog.
+              </p>
+            </div>
 
-                <h2 className="mt-6 text-5xl md:text-6xl font-serif leading-tight">
-                  A small number of levers,
-                  <br />
-                  pulled with care.
-                </h2>
+            {/* Industry Guidance */}
+            <div className="border-t border-white/15 pt-8">
+              <h3 className="text-2xl font-serif text-white/90 mb-4">
+                Industry Guidance
+              </h3>
+              <p className="text-sm text-white/55 font-sans leading-relaxed">
+                Decision support informed by real-world industry context.
+              </p>
+              <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                This engagement centers on evaluating opportunities, filtering teams and collaborators,
+                and pressure-testing timing — with an emphasis on protecting long-term creative ownership
+                and direction.
+              </p>
+            </div>
 
-                <p className="mt-6 text-lg md:text-xl text-white/90 font-sans max-w-xl leading-relaxed">
-                  Hands-on development focused on critical decisions, made in sequence,
-                  with long-term growth in mind.
-                </p>
-              </div>
-
-              {/* Pillars */}
-              <div className="lg:col-span-7">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                  {/* Strategic Direction */}
-                  <div className="border-t border-white/15 pt-8">
-                    <h3 className="text-2xl font-serif text-white/90 mb-4">
-                      Strategic Direction
-                    </h3>
-                    <p className="text-sm text-white/55 font-sans leading-relaxed">
-                      Clarifying the artist’s lane and sequencing decisions that shape
-                      long-term value.
-                    </p>
-                    <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
-                      This engagement focuses on positioning, priorities, and timing,
-                      ensuring early decisions support not just momentum, but the long-term
-                      integrity of the artist’s catalog.
-                    </p>
-                  </div>
-
-                  {/* Industry Guidance */}
-                  <div className="border-t border-white/15 pt-8">
-                    <h3 className="text-2xl font-serif text-white/90 mb-4">
-                      Industry Guidance
-                    </h3>
-                    <p className="text-sm text-white/55 font-sans leading-relaxed">
-                      Decision support informed by real-world industry context.
-                    </p>
-                    <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
-                      This engagement centers on evaluating opportunities, filtering teams
-                      and collaborators, and pressure-testing timing — with an emphasis on
-                      protecting long-term creative ownership and direction.
-                    </p>
-                  </div>
-
-                  {/* Creative Production */}
-                  <div className="border-t border-white/15 pt-8">
-                    <h3 className="text-2xl font-serif text-white/90 mb-4">
-                      Creative Production
-                    </h3>
-                    <p className="text-sm text-white/55 font-sans leading-relaxed">
-                      Hands-on development focused on work that endures.
-                    </p>
-                    <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
-                      This engagement focuses on shaping material, performance, and
-                      presentation so the work reads as intentional, cohesive, and worthy
-                      of standing as part of a lasting catalog.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Approach — full width (no scrollbar) */}
-              <div className="lg:col-span-12 pt-12 border-t border-white/10">
-                <div className="text-xl md:text-2xl font-sans uppercase tracking-[0.2em] text-white/80 mb-10">
-                  Approach
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                  {[
-                    {
-                      n: "01",
-                      title: "Find your lane",
-                      desc: "Clarify what fits, what doesn’t, and where focus actually pays off.",
-                    },
-                    {
-                      n: "02",
-                      title: "Set your direction",
-                      desc: "Align sound, priorities, and decisions around one clear identity.",
-                    },
-                    {
-                      n: "03",
-                      title: "Raise your standard",
-                      desc: "Develop material and execution until it reads as professional.",
-                    },
-                    {
-                      n: "04",
-                      title: "Prepare for the moment",
-                      desc: "Support performance and presentation so the artist shows up ready.",
-                    },
-                  ].map((step) => (
-                    <div key={step.n} className="border-t border-white/15 pt-7">
-                      <div className="text-lg md:text-base font-sans uppercase tracking-[0.28em] text-white/45">
-                        {step.n}
-                      </div>
-                      <div className="mt-3 text-xl lg:text-2xl font-serif text-white/95 leading-snug">
-                        {step.title}
-                      </div>
-                      <p className="mt-3 text-lg md:text-base text-white/70 font-sans leading-relaxed">
-                        {step.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* Creative Production */}
+            <div className="border-t border-white/15 pt-8">
+              <h3 className="text-2xl font-serif text-white/90 mb-4">
+                Creative Production
+              </h3>
+              <p className="text-sm text-white/55 font-sans leading-relaxed">
+                Hands-on development focused on work that endures.
+              </p>
+              <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                This engagement focuses on shaping material, performance, and presentation so the work reads
+                as intentional, cohesive, and worthy of standing as part of a lasting catalog.
+              </p>
             </div>
           </div>
         </div>
-      </section>
 
+        {/* Approach — full width */}
+        <div className="lg:col-span-12 pt-10 border-t border-white/10">
+          <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/80 mb-10">
+            Approach
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {[
+              { n: "01", title: "Find your lane", desc: "Clarify what fits, what doesn’t, and where focus actually pays off." },
+              { n: "02", title: "Set your direction", desc: "Align sound, priorities, and decisions around one clear identity." },
+              { n: "03", title: "Raise your standard", desc: "Develop material and execution until it reads as professional." },
+              { n: "04", title: "Prepare for the moment", desc: "Support performance and presentation so the artist shows up ready." },
+            ].map((step) => (
+              <div key={step.n} className="border-t border-white/15 pt-7">
+                <div className="text-xs font-sans uppercase tracking-[0.28em] text-white/45">
+                  {step.n}
+                </div>
+                <div className="mt-3 text-xl lg:text-2xl font-serif text-white/95 leading-snug">
+                  {step.title}
+                </div>
+                <p className="mt-3 text-sm text-white/70 font-sans leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* 8. CONTACT / APPLICATION */}
       <section id="contact" className="relative py-24 px-0 bg-black text-white w-full overflow-hidden">
         {/* Background Image */}
