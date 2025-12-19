@@ -372,9 +372,6 @@ function ApplicationForm() {
           <Check className="w-8 h-8" aria-hidden="true" />
         </div>
         <h3 className="text-3xl font-serif">Submission Received</h3>
-        <p className="text-muted-foreground font-sans max-w-md mx-auto">
-          Information has been recorded. We’ll follow up if it’s a fit.
-        </p>
       </div>
     );
   }
@@ -458,10 +455,12 @@ function ApplicationForm() {
         <div className="space-y-8">
           <div className="space-y-6">
             <Label className="font-sans text-xs uppercase tracking-wider text-white">
-              Budget Range (Monthly)
+              Estimated Monthly Investment Capacity
             </Label>
             <p className="text-sm text-white mb-4 font-sans uppercase tracking-wider">
-              Select the level of ongoing investment you’re prepared to commit.
+              <span className="text-[0.65rem] text-white font-sans">
+                This helps determine whether an engagement makes sense. Specific structure is discussed later.
+              </span>
             </p>
             <RadioGroup
               value={formData.budget}
@@ -516,9 +515,6 @@ function ApplicationForm() {
           <div className="bg-black p-8 text-sm text-white/80 font-sans border-l-2 border-white/30">
             <p className="mb-2 font-bold text-white uppercase tracking-wider text-xs">
               Confirmation
-            </p>
-            <p>
-              Submitting this form requests a strategy call. Availability is limited and not every request is accepted.
             </p>
           </div>
 
