@@ -152,8 +152,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* 5. CAPABILITIES */}
       {/* 5. CAPABILITIES */}
       <section className="relative py-32 bg-black text-white px-6 overflow-hidden">
         {/* Background Image */}
@@ -173,7 +171,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
               {/* Intro */}
               <div className="lg:col-span-5">
-                <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/40">
+                <div className="text-xl md:text-2xl font-sans uppercase tracking-[0.2em] text-white/80">
                   Capabilities
                 </div>
 
@@ -242,7 +240,7 @@ export default function Home() {
 
               {/* Approach — full width (no scrollbar) */}
               <div className="lg:col-span-12 pt-12 border-t border-white/10">
-                <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/80 mb-10">
+                <div className="text-xl md:text-2xl font-sans uppercase tracking-[0.2em] text-white/80 mb-10">
                   Approach
                 </div>
 
@@ -270,13 +268,13 @@ export default function Home() {
                     },
                   ].map((step) => (
                     <div key={step.n} className="border-t border-white/15 pt-7">
-                      <div className="text-xs font-sans uppercase tracking-[0.28em] text-white/45">
+                      <div className="text-lg md:text-base font-sans uppercase tracking-[0.28em] text-white/45">
                         {step.n}
                       </div>
                       <div className="mt-3 text-xl lg:text-2xl font-serif text-white/95 leading-snug">
                         {step.title}
                       </div>
-                      <p className="mt-3 text-sm text-white/70 font-sans leading-relaxed">
+                      <p className="mt-3 text-lg md:text-base text-white/70 font-sans leading-relaxed">
                         {step.desc}
                       </p>
                     </div>
@@ -287,7 +285,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* 8. CONTACT / APPLICATION */}
       <section id="contact" className="relative py-24 px-0 bg-black text-white w-full overflow-hidden">
