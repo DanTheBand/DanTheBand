@@ -10,8 +10,34 @@ import { Link } from "wouter";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-background text-foreground selection:bg-white/10">
+      {/* Mobile-only top bar */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50">
+        <div className="px-4 pt-4">
+          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-black/60 backdrop-blur-md px-4 py-3">
+            <button
+              type="button"
+              className="text-white/80 font-sans text-xs uppercase tracking-widest"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="Scroll to top"
+            >
+              Artist Development
+            </button>
+
+            <button
+              type="button"
+              className="text-white font-sans text-xs uppercase tracking-widest"
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+              }
+              aria-label="Request Strategy Call"
+            >
+              Request Call
+            </button>
+          </div>
+        </div>
+      </div>
       {/* 1. HERO */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden pt-24 md:pt-0">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
