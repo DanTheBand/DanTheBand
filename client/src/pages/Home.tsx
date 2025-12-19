@@ -23,6 +23,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background/80" />
         </div>
+            {/* Approach — full width */}
 
         <div className="relative z-10 max-w-5xl mx-auto space-y-12">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white">
@@ -153,6 +154,7 @@ export default function Home() {
 
 
       {/* 5. CAPABILITIES */}
+      {/* 5. CAPABILITIES */}
       <section className="relative py-32 bg-black text-white px-6 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -165,117 +167,124 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
         </div>
+
         <div className="relative z-10">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            {/* Intro */}
-            <div className="lg:col-span-5 space-y-8">
-              <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/40">
-                Capabilities
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+              {/* Intro */}
+              <div className="lg:col-span-5">
+                <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/40">
+                  Capabilities
+                </div>
+
+                <h2 className="mt-6 text-5xl md:text-6xl font-serif leading-tight">
+                  A small number of levers,
+                  <br />
+                  pulled with care.
+                </h2>
+
+                <p className="mt-6 text-lg md:text-xl text-white/90 font-sans max-w-xl leading-relaxed">
+                  Hands-on development focused on critical decisions, made in sequence,
+                  with long-term growth in mind.
+                </p>
               </div>
-              <h2 className="text-5xl md:text-6xl font-serif leading-tight">
-                A small number of levers,
-                <br />
-                pulled with care.
-              </h2>
-              <p className="text-lg md:text-xl text-white/90 font-sans max-w-xl leading-relaxed">
-                Hands-on development focused on critical decisions,
-                made in sequence, with long-term growth in mind.
-              </p>
 
-              <div className="pt-10 border-t border-white/10 space-y-10">
-                <div>
-                  <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/80">
-                    Approach
+              {/* Pillars */}
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                  {/* Strategic Direction */}
+                  <div className="border-t border-white/15 pt-8">
+                    <h3 className="text-2xl font-serif text-white/90 mb-4">
+                      Strategic Direction
+                    </h3>
+                    <p className="text-sm text-white/55 font-sans leading-relaxed">
+                      Clarifying the artist’s lane and sequencing decisions that shape
+                      long-term value.
+                    </p>
+                    <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                      This engagement focuses on positioning, priorities, and timing,
+                      ensuring early decisions support not just momentum, but the long-term
+                      integrity of the artist’s catalog.
+                    </p>
                   </div>
-                  <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    {[
-                      {
-                        n: "01",
-                        title: "Find your lane",
-                        desc: "Clarify what fits, what doesn’t, and where focus actually pays off.",
-                      },
-                      {
-                        n: "02",
-                        title: "Set your direction",
-                        desc: "Align sound, priorities, and decisions around one clear identity.",
-                      },
-                      {
-                        n: "03",
-                        title: "Raise your standard",
-                        desc: "Develop material and execution until it reads as professional.",
-                      },
-                      {
-                        n: "04",
-                        title: "Prepare for the moment",
-                        desc: "Support performance and presentation so the artist shows up ready.",
-                      },
-                    ].map((step) => (
-                      <div key={step.n} className="space-y-3">
-                        <div className="text-xs font-sans text-white/80 tracking-widest">{step.n}</div>
-                        <div className="text-xl font-serif text-white/95">{step.title}</div>
-                        <p className="text-sm text-white/90 font-sans leading-relaxed">
-                          {step.desc}
-                        </p>
-                      </div>
-                    ))}
+
+                  {/* Industry Guidance */}
+                  <div className="border-t border-white/15 pt-8">
+                    <h3 className="text-2xl font-serif text-white/90 mb-4">
+                      Industry Guidance
+                    </h3>
+                    <p className="text-sm text-white/55 font-sans leading-relaxed">
+                      Decision support informed by real-world industry context.
+                    </p>
+                    <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
+                      This engagement centers on evaluating opportunities, filtering teams
+                      and collaborators, and pressure-testing timing — with an emphasis on
+                      protecting long-term creative ownership and direction.
+                    </p>
                   </div>
-                </div>
 
-              </div>
-            </div>
-
-            {/* Pillars */}
-            <div className="lg:col-span-7">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                {/* Strategic Direction */}
-                <div className="border-t border-white/15 pt-8">
-                  <h3 className="text-2xl font-serif text-white/90 mb-4">Strategic Direction</h3>
-                  <p className="text-sm text-white/55 font-sans leading-relaxed">
-                    Clarifying the artist’s lane and sequencing decisions that shape long-term value.
-                  </p>
-                  <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
-                    This engagement focuses on positioning, priorities, and timing, ensuring early decisions support not just momentum,
-                    but the long-term integrity of the artist’s catalog.
-                  </p>
-                </div>
-
-                {/* Industry Guidance */}
-                <div className="border-t border-white/15 pt-8">
-                  <h3 className="text-2xl font-serif text-white/90 mb-4">Industry Guidance</h3>
-                 <p className="text-sm text-white/55 font-sans leading-relaxed">
-                    Decision support informed by real-world industry context.
-                  </p>
-                  <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
-                    This engagement centers on evaluating opportunities, filtering teams and collaborators, and pressure-testing timing —
-                    with an emphasis on protecting long-term creative ownership and direction.
-                  </p>
-                </div>
-
-                {/* Creative Production */}
-                <div className="border-t border-white/15 pt-8">
-                  <h3 className="text-2xl font-serif text-white/90 mb-4">Creative Production</h3>
-                 <p className="text-sm text-white/55 font-sans leading-relaxed">
+                  {/* Creative Production */}
+                  <div className="border-t border-white/15 pt-8">
+                    <h3 className="text-2xl font-serif text-white/90 mb-4">
+                      Creative Production
+                    </h3>
+                    <p className="text-sm text-white/55 font-sans leading-relaxed">
                       Hands-on development focused on work that endures.
                     </p>
                     <p className="mt-6 text-sm text-white/75 font-sans leading-relaxed">
-                      This engagement focuses on shaping material, performance, and presentation so the work reads as intentional,
-                      cohesive, and worthy of standing as part of a lasting catalog.
+                      This engagement focuses on shaping material, performance, and
+                      presentation so the work reads as intentional, cohesive, and worthy
+                      of standing as part of a lasting catalog.
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Approach — full width (no scrollbar) */}
+              <div className="lg:col-span-12 pt-12 border-t border-white/10">
+                <div className="text-xs font-sans uppercase tracking-[0.2em] text-white/80 mb-10">
+                  Approach
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                  {[
+                    {
+                      n: "01",
+                      title: "Find your lane",
+                      desc: "Clarify what fits, what doesn’t, and where focus actually pays off.",
+                    },
+                    {
+                      n: "02",
+                      title: "Set your direction",
+                      desc: "Align sound, priorities, and decisions around one clear identity.",
+                    },
+                    {
+                      n: "03",
+                      title: "Raise your standard",
+                      desc: "Develop material and execution until it reads as professional.",
+                    },
+                    {
+                      n: "04",
+                      title: "Prepare for the moment",
+                      desc: "Support performance and presentation so the artist shows up ready.",
+                    },
+                  ].map((step) => (
+                    <div key={step.n} className="border-t border-white/15 pt-7">
+                      <div className="text-xs font-sans uppercase tracking-[0.28em] text-white/45">
+                        {step.n}
+                      </div>
+                      <div className="mt-3 text-xl lg:text-2xl font-serif text-white/95 leading-snug">
+                        {step.title}
+                      </div>
+                      <p className="mt-3 text-sm text-white/70 font-sans leading-relaxed">
+                        {step.desc}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        </div>
-      </section>
-
-      {/* Long-term Value Statement */}
-      <section className="py-20 bg-black text-white px-6">
-        <div className="container mx-auto max-w-3xl text-center">
-          <p className="text-xl md:text-2xl font-serif text-white leading-relaxed">
-            The long-term value of an artist’s catalog is shaped far earlier than most people realize.
-          </p>
         </div>
       </section>
 
