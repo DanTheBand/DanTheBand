@@ -364,11 +364,17 @@ function ApplicationForm() {
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-    // Guardrail: prevent accidental deploys that still use the placeholder key
-    if (!accessKey || accessKey === "423c2b5d-8f83-4a0e-aa40-45aca3b1162d") {
+    // Guardrail: prevent accidental deploys that still use a placeholder or missing key
+    const isPlaceholderKey =
+      !accessKey ||
+      accessKey === "YOUR_ACCESS_KEY_HERE" ||
+      accessKey.toLowerCase().includes("placeholder") ||
+      accessKey.length < 30;
+
+    if (isPlaceholderKey) {
       setIsSubmitting(false);
       setError(
-        "Form is not configured yet. Missing VITE_WEB3FORMS_ACCESS_KEY (currently using placeholder).",
+        "Form is not configured yet. Missing VITE_WEB3FORMS_ACCESS_KEY.",
       );
       return;
     }
