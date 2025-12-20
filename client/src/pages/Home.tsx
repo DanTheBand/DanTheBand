@@ -363,6 +363,10 @@ function ApplicationForm() {
     setError(null);
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (typeof window !== "undefined") {
+      // Debug: Log the access key in production
+      console.log("VITE_WEB3FORMS_ACCESS_KEY:", accessKey);
+    }
 
     // Guardrail: prevent accidental deploys that still use a placeholder or missing key
     const isPlaceholderKey =
