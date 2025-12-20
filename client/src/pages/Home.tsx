@@ -346,7 +346,10 @@ function ApplicationForm() {
   });
 
   const handleNext = () => {
-    if (step === 1 && !formData.email.trim()) {
+    if (
+      step === 1 &&
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
+    ) {
       setError("Please enter a valid email address before continuing.");
       return;
     }
@@ -359,6 +362,17 @@ function ApplicationForm() {
     setIsSubmitting(true);
     setError(null);
 
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    // Guardrail: prevent accidental deploys that still use the placeholder key
+    if (!accessKey || accessKey === "423c2b5d-8f83-4a0e-aa40-45aca3b1162d") {
+      setIsSubmitting(false);
+      setError(
+        "Form is not configured yet. Missing VITE_WEB3FORMS_ACCESS_KEY (currently using placeholder).",
+      );
+      return;
+    }
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -367,11 +381,15 @@ function ApplicationForm() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key:
-            import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
-          ...formData,
-          subject: `New Strategy Call Request: ${formData.artistName}`,
+          access_key: accessKey,
+          // Useful metadata for identifying where the submission came from
           from_name: "Artist Development Site",
+          subject: `New Strategy Call Request: ${formData.artistName || "(No artist name)"}`,
+          // Web3Forms supports replyto; helps you reply directly from the email you receive
+          replyto: formData.email,
+          // Include the page origin so you can tell if it's from localhost vs production
+          origin: window.location.origin,
+          ...formData,
         }),
       });
 
